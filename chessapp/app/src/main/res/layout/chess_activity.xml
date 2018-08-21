@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChessActivity">
+
+
+    <TableLayout
+        android:id="@+id/chessboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_bar">
+
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/chessboard"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/playerInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:layout_span="2"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/player_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/undo_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Undo"/>
+
+            <Button
+                android:id="@+id/ai_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI" />
+            <Button
+                android:id="@+id/draw_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Draw" />
+            <Button
+                android:id="@+id/resign_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resign"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/replay_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next Move"
+                android:visibility="visible" />
+            <Button
+                android:id="@+id/end_playback_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Playback"
+                android:visibility="visible" />
+        </TableRow>
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
